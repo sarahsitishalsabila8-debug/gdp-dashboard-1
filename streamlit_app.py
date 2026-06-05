@@ -63,3 +63,12 @@ with col2:
     st.write("*Piktogram:*", bahan["ghs"])
 
 st.success("Data diambil dari database bahan kimia laboratorium.")
+
+st.image("struktur/hcl.png", width=300)
+
+with open("msds/hcl.pdf", "rb") as file:
+    st.download_button(
+        "Download MSDS",
+        file,
+        file_name="MSDS_HCl.pdf"
+    )
